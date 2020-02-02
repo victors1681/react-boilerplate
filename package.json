@@ -41,6 +41,8 @@
     "@babel/plugin-transform-spread": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "cache-loader": "^2.0.1",
@@ -57,16 +59,18 @@
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prettier": "^1.19.1",
     "raw-loader": "^1.0.0",
     "redux-devtools-extension": "^2.13.8",
     "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.2",
     "thread-loader": "^2.1.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.3",
     "webpack-bundle-analyzer": "^3.0.4",
@@ -95,6 +99,7 @@
     "styled-components": "^4.2.0",
     "uuid": "^3.4.0",
     "yup": "^0.28.1",
-    "react-hot-loader": "^4.12.19"
+    "react-hot-loader": "^4.12.19",
+    "mini-css-extract-plugin": "^0.5.0"
   }
 }
