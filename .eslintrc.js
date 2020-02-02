@@ -14,6 +14,9 @@ module.exports = {
       version: "16.8"
     },
     "import/resolver": {
+      "typescript": {
+        "directory": "./tsconfig.json"
+      },
       node: {
         paths: ["./src"],
         extensions: [".js", ".jsx", ".ts", ".tsx"]
@@ -25,11 +28,25 @@ module.exports = {
     "eslint:recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   plugins: [ 
     "react-hooks"
   ],
   rules: {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ],
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "@typescript-eslint/explicit-function-return-type": "off",
     "import/prefer-default-export": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",

@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
 //import { getCsrfToken } from "./containers/main/reducer";
-const getCsrfToken = () => "";
+const getCsrfToken = () => '';
 
 const restClient = axios.create();
 
@@ -14,7 +14,7 @@ export const configureRestClient = (store, baseURL) => {
     const csrfToken = getCsrfToken(store.getState());
     if (csrfToken) {
       if (/^(post|put|patch|delete)$/i.test(config.method)) {
-        newConfig.headers["X-CSRF-TOKEN"] = csrfToken;
+        newConfig.headers['X-CSRF-TOKEN'] = csrfToken;
       }
     }
     return newConfig;

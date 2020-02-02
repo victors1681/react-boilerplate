@@ -1,11 +1,15 @@
 {
     "compilerOptions": {
-        "module": "system",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "outDir": "./dist/",
-        "sourceMap": true
+		  "jsx": "react", 
+		  "module": "commonjs",
+		  "noImplicitAny": true,
+		  "removeComments": true,
+		  "preserveConstEnums": true,
+		"outDir": "./dist/",
+		"stripInternal": true,
+		"target": "es6",
+		"sourceMap": true, 
+		"allowSyntheticDefaultImports": true
     },
     "include": [
         "src/**/*"
@@ -13,5 +17,5 @@
     "exclude": [
         "node_modules",
         "**/*.spec.ts"
-    ]
+	]
 }

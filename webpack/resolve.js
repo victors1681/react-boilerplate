@@ -10,7 +10,7 @@ const getResolve = () => ({
     utils: path.join(__dirname, "..", "src", "utils"),
     "react-dom": "@hot-loader/react-dom"
   },
-  extensions: [".js", ".tsx"],
+  extensions: ['.ts', '.tsx', '.js', '.jsx'],
   modules: [
     path.resolve(__dirname, "..", "src"),
     path.resolve(__dirname, "..", "node_modules")

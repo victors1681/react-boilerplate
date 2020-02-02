@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { isDev } = require("./utils");
 
 const getBabelLoader = () => ({
-  test: /\.(js|tsx)$/,
+  test: /\.(j|t)s(x)?$/,
   exclude: /node_modules/,
   use: ["cache-loader", "babel-loader?cacheDirectory", "thread-loader"]
 });

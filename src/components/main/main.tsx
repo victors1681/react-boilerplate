@@ -1,14 +1,13 @@
-import * as React from "react";
+import * as React from 'react';
 
-export interface MainProps { 
+export interface MainProps {
   buttonLabel: string;
-  onInit: ()=>({});
+  onInit: () => {};
 }
 
 const Main = (props: MainProps) => (
   <div>
-    Hello I'm the main container
-<button onClick={() => props.onInit()}> {props.buttonLabel}</button>
+    <button onClick={() => props.onInit()}> {props.buttonLabel}</button>
   </div>
 );
 

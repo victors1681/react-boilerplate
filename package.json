@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config webpack.config.js --env.NODE_ENV=development",
     "build": "webpack --config webpack.config.js --env.NODE_ENV=production",
-    "lint": "eslint ./src --fix",
+    "lint": "eslint --ext .js,.ts,.tsx ./src --fix",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "analyze": "npm run start -- --env.analyze"
   },
   "repository": {
@@ -41,8 +42,10 @@
     "@babel/plugin-transform-spread": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.8.3",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "cache-loader": "^2.0.1",
@@ -70,6 +73,7 @@
     "terser-webpack-plugin": "^1.2.2",
     "thread-loader": "^2.1.2",
     "ts-loader": "^6.2.1",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.7.5",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.3",
@@ -78,19 +82,22 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "@hot-loader/react-dom": "^16.11.0",
     "@babel/polyfill": "^7.4.0",
+    "@hot-loader/react-dom": "^16.11.0",
     "@material-ui/core": "^4.9.0",
     "@material-ui/icons": "^4.5.1",
     "@material-ui/styles": "^4.9.0",
+    "@types/styled-components": "^4.4.2",
     "axios": "^0.18.0",
     "formik": "^1.5.2",
     "lodash": "^4.17.15",
+    "mini-css-extract-plugin": "^0.5.0",
     "moment": "^2.24.0",
     "mui-datatables": "^2.14.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-hot-loader": "^4.12.19",
     "react-router-dom": "^5.0.0",
     "react-spring": "^8.0.27",
     "react-toastify": "^5.5.0",
@@ -98,8 +105,6 @@
     "scheduler": "^0.13.2",
     "styled-components": "^4.2.0",
     "uuid": "^3.4.0",
-    "yup": "^0.28.1",
-    "react-hot-loader": "^4.12.19",
-    "mini-css-extract-plugin": "^0.5.0"
+    "yup": "^0.28.1"
   }
 }
