@@ -3,8 +3,12 @@ const path = require("path");
 const getResolve = () => ({
   alias: {
     components: path.join(__dirname, "..", "src", "components"),
-    containers: path.join(__dirname, "..", "src", "containers"),
-    common: path.join(__dirname, "..", "src", "common")
+    contexts: path.join(__dirname, "..", "src", "contexts"),
+    hooks: path.join(__dirname, "..", "src", "hooks"),
+    layouts: path.join(__dirname, "..", "src", "layouts"),
+    common: path.join(__dirname, "..", "src", "common"),
+    utils: path.join(__dirname, "..", "src", "utils"),
+    "react-dom": "@hot-loader/react-dom"
   },
   extensions: [".js"],
   modules: [

@@ -1,8 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import Main from "./containers/main";
-import Store from "./store";
+import ReactDOM from "react-dom"; 
+import Main from "./components/main"; 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navigation from "components/navigation";
 import NotFound from "components/notFound";
@@ -11,8 +9,7 @@ import theme from "./common/theme/theme";
 import { MainWrapper } from "./common/styles/common.styled.js";
 import "./common/theme/fontFace.scss";
 
-ReactDOM.render(
-  <Provider store={Store}>
+ReactDOM.render( 
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <MainWrapper>
@@ -23,7 +20,6 @@ ReactDOM.render(
           </Switch>
         </MainWrapper>
       </BrowserRouter>
-    </ThemeProvider>
-  </Provider>,
+    </ThemeProvider>,
   document.getElementById("mainApp")
 );
