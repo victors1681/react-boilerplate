@@ -9,6 +9,14 @@ module.exports = {
     SharedArrayBuffer: "readonly"
   },
   parser: "babel-eslint",
+  parserOptions: { 
+   parser: "@typescript-eslint/parser",
+   ecmaVersion: 6,
+    sourceType: "module",
+    ecmaFeatures: {
+        jsx: true
+    }
+  },
   settings: {
     react: {
       version: "16.8"
@@ -17,19 +25,15 @@ module.exports = {
       "typescript": {
         "directory": "./tsconfig.json"
       },
-      node: {
-        paths: ["./src"],
-        extensions: [".js", ".jsx", ".ts", ".tsx"]
-      }
     }
   },
   extends: [
     "airbnb",
     "eslint:recommended",
-    "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
   ],
   plugins: [ 
     "react-hooks"
@@ -46,6 +50,9 @@ module.exports = {
       }
    ],
     "prettier/prettier": ["error", { "singleQuote": true }],
+    "import/named": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "import/prefer-default-export": "off",
     "react-hooks/rules-of-hooks": "error",
