@@ -89,7 +89,7 @@
     "@material-ui/icons": "^4.5.1",
     "@material-ui/styles": "^4.9.0",
     "@types/styled-components": "^4.4.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "file-loader": "^5.0.2",
     "formik": "^1.5.2",
     "lodash": "^4.17.15",
